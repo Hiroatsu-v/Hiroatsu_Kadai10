@@ -26,11 +26,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
-        tableView.delegate = self
     }
 }
-// MARK: UITableViewDataSource, UITableViewDelegate
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+// MARK: UITableViewDataSource
+extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return prefecturesArray.count
     }
