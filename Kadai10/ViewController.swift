@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
-    private var prefecturesArray: [String] = [
+    private let prefecturesArray: [String] = [
         "北海道", "青森県", "岩手県", "宮城県", "秋田県",
         "山形県", "福島県", "茨城県", "栃木県", "群馬県",
         "埼玉県", "千葉県", "東京都", "神奈川県", "新潟県",
@@ -28,31 +28,29 @@ class ViewController: UIViewController {
         tableView.dataSource = self
     }
 }
+
 // MARK: UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return prefecturesArray.count
+        prefecturesArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        // swiftlint:disable:next force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PrefectureCell
 
         // cellの背景色の設定
-        if indexPath.row % 3 == 1 {
-            cell.backgroundColor = .systemGreen
-        } else if indexPath.row % 3 == 2 {
-            cell.backgroundColor = .systemBlue
-        } else {
+        switch indexPath.row % 3 {
+        case 0:
             cell.backgroundColor = .systemRed
+        case 1:
+            cell.backgroundColor = .systemGreen
+        default:
+            cell.backgroundColor = .systemBlue
         }
 
-        // swiftlint:disable:next force_cast
-        let prefecturesLabel = cell.viewWithTag(1) as! UILabel
-        prefecturesLabel.text = prefecturesArray[indexPath.row]
+        cell.configure(name: prefecturesArray[indexPath.row], row: indexPath.row)
 
-        // swiftlint:disable:next force_cast
-        let numberLabel = cell.viewWithTag(2) as! UILabel
-        numberLabel.text = "\(indexPath.row + 1)番目の都道府県です"
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
