@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47AD73CB2737FDB100F0A0FD /* PrefectureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AD73C92737FDB100F0A0FD /* PrefectureCell.swift */; };
 		47E4FDDA27331CC500E15590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4FDD927331CC500E15590 /* AppDelegate.swift */; };
 		47E4FDDC27331CC500E15590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4FDDB27331CC500E15590 /* SceneDelegate.swift */; };
 		47E4FDDE27331CC500E15590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E4FDDD27331CC500E15590 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47AD73C92737FDB100F0A0FD /* PrefectureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureCell.swift; sourceTree = "<group>"; };
 		47E4FDD627331CC500E15590 /* Kadai10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kadai10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E4FDD927331CC500E15590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E4FDDB27331CC500E15590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				47E4FDE227331CCA00E15590 /* Assets.xcassets */,
 				47E4FDE427331CCA00E15590 /* LaunchScreen.storyboard */,
 				47E4FDE727331CCA00E15590 /* Info.plist */,
+				47AD73C92737FDB100F0A0FD /* PrefectureCell.swift */,
 			);
 			path = Kadai10;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47AD73CB2737FDB100F0A0FD /* PrefectureCell.swift in Sources */,
 				47E4FDDE27331CC500E15590 /* ViewController.swift in Sources */,
 				47E4FDDA27331CC500E15590 /* AppDelegate.swift in Sources */,
 				47E4FDDC27331CC500E15590 /* SceneDelegate.swift in Sources */,
